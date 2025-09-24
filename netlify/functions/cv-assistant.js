@@ -1,3 +1,4 @@
+// Force a new deployment to pick up the Node.js runtime change
 exports.handler = async function(event, context) {
   // Ensure the request is a POST method.
   if (event.httpMethod!== "POST") {
@@ -65,4 +66,5 @@ exports.handler = async function(event, context) {
       body: `Internal Server Error: ${error.message}`
     };
   }
+
 };
