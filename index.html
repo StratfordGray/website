@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratford Gray | Your Agile Recruitment Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blue-gray': '#4a5568',
+                        'blue-gray-light': '#718096',
+                        'blue-gray-lighter': '#a0aec0',
+                        'pale-bg': '#f8fafc',
+                        'gold': '#c7a159',
+                        'dark-text': '#2d3748',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+       .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+       .bg-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+       .loader {
+            border: 2px solid #e2e8f0;
+            border-top: 2px solid #c7a159;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+       .hide-scroll-bar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+       .hide-scroll-bar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-pale-bg text-dark-text">
+
+    <div id="top" class="min-h-screen flex flex-col">
+        
+        <header class="w-full p-6 md:p-8 sticky top-0 bg-pale-bg/80 backdrop-blur-sm z-50 border-b border-gray-200/50">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="#top" class="flex items-center gap-3 cursor-pointer">
+                     <svg class="w-10 h-10 text-gold" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M75 25 C75 10, 60 10, 50 10 S 25 10, 25 25" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M25 75 C25 90, 40 90, 50 90 S 75 90, 75 75" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                        <line x1="25" y1="50" x2="75" y2="50" stroke="#4a5568" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                    <span class="text-xl font-bold tracking-wider text-dark-text hidden sm:block">STRATFORD GRAY</span>
+                </a>
+                <nav class="flex items-center gap-4 text-sm font-medium">
+                    <a href="#candidates" class="text-blue-gray border border-gray-300 hover:bg-gray-200 transition-colors px-4 py-2 rounded-md">For Candidates</a>
+                    <a href="#clients" class="bg-gold text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-all">For Clients</a>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="flex-grow">
+
+            <section id="home" class="bg-pattern">
+                 <div class="container mx-auto px-6 py-24 text-center flex flex-col items-center justify-center min-h-[calc(100vh-100px)]">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-dark-text">
+                        Navigating Complexity, <span class="text-gold">Delivering Clarity.</span>
+                    </h1>
+                    
+                    <p class="mt-8 text-lg md:text-xl text-blue-gray max-w-2xl mx-auto">Your Agile Recruitment Partner</p>
+
+                    <div class="mt-12 flex flex-col sm:flex-row gap-4">
+                        <a href="#candidates" class="text-blue-gray border border-gray-300 hover:bg-gray-200 transition-colors font-bold py-4 px-8 rounded-lg text-lg">
+                            For Candidates
+                        </a>
+                        <a href="#clients" class="bg-gold text-white font-bold py-4 px-8 rounded-lg hover:bg-opacity-90 transition-all text-lg">
+                            For Clients
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="py-16 md:py-24 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                         <h2 class="text-3xl md:text-5xl font-playfair font-bold text-dark-text">Bespoke Recruitment, Redefined</h2>
+                         <p class="mt-4 text-lg text-blue-gray max-w-3xl mx-auto">We are an agile recruitment partner dedicated to the legal sector, delivering a flexible and personal service that puts candidates and clients first.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="text-blue-gray-light space-y-4 text-justify">
+                            <h3 class="text-2xl font-bold text-dark-text font-playfair">Our Philosophy</h3>
+                            <p>At Stratford Gray, we believe recruitment is more than just filling a vacancy. It's about forging lasting partnerships. We operate with unparalleled agility, adapting our process to the unique needs of every client and the specific career aspirations of each candidate. Our approach is built on a foundation of deep industry knowledge, transparent communication, and genuine care. We take the time to understand the nuances of your firm's culture and the subtleties of a candidate's ambition, ensuring a perfect alignment that fosters long-term success.</p>
+                             <p>Our commitment to a flexible service means we are always responsive, always available, and always thinking ahead. We are your strategic partner, invested in your growth and success.</p>
+                        </div>
+                        <div class="bg-pale-bg p-8 rounded-lg shadow-sm border border-gray-200">
+                            <div class="flex items-center gap-6">
+                                <img src="https://placehold.co/100x100/c7a159/FFFFFF?text=JJ" alt="John Jennings, Director" class="rounded-full w-24 h-24 border-4 border-gray-200">
+                                <div>
+                                    <h4 class="text-2xl font-bold text-dark-text">John Jennings</h4>
+                                    <p class="text-gold font-medium">Director</p>
+                                </div>
+                            </div>
+                            <p class="mt-6 text-blue-gray">"With over 10 years' experience dedicated to the legal recruitment sector, I founded Stratford Gray to offer a more tailored and responsive service. My passion is connecting exceptional talent with leading firms, building careers and businesses in the process. I am personally committed to every search we undertake."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="jobs" class="py-16 md:py-24 bg-pale-bg">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                         <h2 class="text-3xl md:text-5xl font-playfair font-bold text-dark-text">Current Opportunities</h2>
+                         <p class="mt-4 text-lg text-blue-gray max-w-3xl mx-auto">Explore a selection of our featured roles. New opportunities are added regularly.</p>
+                    </div>
+                    <div class="relative">
+                        <div id="jobs-container" class="flex overflow-x-auto space-x-8 pb-8 hide-scroll-bar">
+                        </div>
+                        <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/80 p-2 rounded-full transition-colors z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-dark-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                        </button>
+                        <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/80 p-2 rounded-full transition-colors z-10">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-dark-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="interactive-tools" class="py-16 md:py-24 bg-pattern">
+                 <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                         <h2 class="text-3xl md:text-5xl font-playfair font-bold text-dark-text">Connect With Us</h2>
+                         <p class="mt-4 text-lg text-blue-gray max-w-3xl mx-auto">We welcome enquiries from clients and candidates. Explore our tools and contact methods below.</p>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        <div id="candidates" class="space-y-8">
+                            <h3 class="text-2xl font-bold text-dark-text font-playfair text-center">For Candidates</h3>
+                            <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                                <h4 class="text-xl font-bold text-dark-text flex items-center gap-2">✨ AI-Powered CV Assistant</h4>
+                                <p class="mt-2 text-blue-gray text-sm">Paste your CV below to get instant feedback and suggestions tailored for the legal sector.</p>
+                                <div class="mt-4">
+                                    <textarea id="cv-input" rows="8" class="w-full bg-pale-bg border-gray-300 rounded-md shadow-sm py-2 px-3 text-dark-text focus:outline-none focus:ring-gold focus:border-gold" placeholder="Paste your CV text here..."></textarea>
+                                </div>
+                                <button id="cv-submit-btn" class="mt-4 w-full bg-gray-200 text-dark-text font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-all flex items-center justify-center gap-2">
+                                    <span id="cv-btn-text">Get Feedback</span>
+                                    <div id="cv-loader" class="loader hidden"></div>
+                                </button>
+                                <div id="cv-results" class="mt-6 text-left border-t border-gray-200 pt-4 text-blue-gray-light"></div>
+                            </div>
+                             <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
+                                <h4 class="text-xl font-bold text-dark-text">Ready to Apply?</h4>
+                                <p class="mt-2 text-blue-gray text-sm">Submit your CV for a confidential review. We accept formats such as.pdf,.doc,.docx, etc.</p>
+                                <a href="mailto:john@stratfordgray.com?subject=CV Submission - Stratford Gray" class="mt-4 w-full max-w-xs bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-lg flex items-center justify-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    Submit Your CV
+                                 </a>
+                            </div>
+                        </div>
+                        
+                         <div id="clients" class="space-y-8">
+                            <h3 class="text-2xl font-bold text-dark-text font-playfair text-center">For Clients</h3>
+                             <div class="p-8 rounded-lg border border-gray-200 bg-white shadow-md h-fit">
+                                 <h4 class="text-xl font-bold text-dark-text text-center mb-6">General Enquiries</h4>
+                                 <form id="contact-form" class="space-y-4" data-netlify="true">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-blue-gray">Full Name</label>
+                                        <input type="text" id="name" name="name" required class="mt-1 block w-full bg-pale-bg border-gray-300 rounded-md shadow-sm py-2 px-3 text-dark-text focus:outline-none focus:ring-gold focus:border-gold">
+                                    </div>
+                                     <div>
+                                        <label for="email" class="block text-sm font-medium text-blue-gray">Email Address</label>
+                                        <input type="email" id="email" name="email" required class="mt-1 block w-full bg-pale-bg border-gray-300 rounded-md shadow-sm py-2 px-3 text-dark-text focus:outline-none focus:ring-gold focus:border-gold">
+                                    </div>
+                                    <div>
+                                        <label for="message" class="block text-sm font-medium text-blue-gray">Message</label>
+                                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full bg-pale-bg border-gray-300 rounded-md shadow-sm py-2 px-3 text-dark-text focus:outline-none focus:ring-gold focus:border-gold"></textarea>
+                                    </div>
+                                    <div>
+                                         <button type="submit" class="w-full bg-blue-gray text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-gray-light transition-all text-lg">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                 </form>
+                             </div>
+                            <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                                <h4 class="text-xl font-bold text-dark-text flex items-center gap-2">📝 AI Job Description Assistant</h4>
+                                <p class="mt-2 text-blue-gray text-sm">Enter a job title and key responsibilities to generate a compelling job description.</p>
+                                <div class="mt-4 space-y-4">
+                                    <input type="text" id="jd-title" class="w-full bg-pale-bg border-gray-300 rounded-md shadow-sm py-2 px-3 text-dark-text focus:outline-none focus:ring-gold focus:border-gold" placeholder="e.g., Corporate Solicitor">
+                                    <textarea id="jd-input" rows="5" class="w-full bg-pale-bg border-gray-300 rounded-md shadow-sm py-2 px-3 text-dark-text focus:outline-none focus:ring-gold focus:border-gold" placeholder="e.g., Key responsibilities: M&A transactions, drafting contracts, advising on corporate governance..."></textarea>
+                                </div>
+                                <button id="jd-submit-btn" class="mt-4 w-full bg-gray-200 text-dark-text font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-all flex items-center justify-center gap-2">
+                                    <span id="jd-btn-text">Generate Description</span>
+                                    <div id="jd-loader" class="loader hidden"></div>
+                                </button>
+                                <div id="jd-results" class="mt-6 text-left border-t border-gray-200 pt-4 text-blue-gray-light"></div>
+                            </div>
+                         </div>
+                    </div>
+                 </div>
+            </section>
+        </main>
+
+        <footer class="w-full p-6 md:p-8 bg-white border-t border-gray-200/50">
+            <div class="container mx-auto text-center text-gray-400 text-sm">
+                &copy; 2025 Stratford Gray. All Rights Reserved.
+                <a href="#" id="privacy-link" class="ml-4 hover:text-gold transition-colors">Privacy Policy</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="job-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex items-center justify-center p-4">
+        <div id="job-modal-content" class="bg-white text-dark-text rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
+        </div>
+    </div>
+
+    <div id="privacy-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white text-dark-text rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
+            <button id="close-privacy-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-2xl font-bold font-playfair mb-4">Privacy Policy</h2>
+            <div class="space-y-4 text-sm text-blue-gray">
+                <p><strong class="text-dark-text">Effective Date:</strong> 20 September 2025</p>
+                
+                <h3 class="text-lg font-bold font-playfair text-dark-text pt-2">1. Introduction</h3>
+                <p>Welcome to Stratford Gray ("we", "us", "our"). We are a recruitment partner committed to protecting your privacy and handling your data in an open and transparent manner. This privacy policy explains how we collect, use, and protect your personal information when you use our website, stratfordgray.com.</p>
+
+                <h3 class="text-lg font-bold font-playfair text-dark-text pt-2">2. Information We Collect</h3>
+                <p>We collect information in the following ways:</p>
+                <ul class="list-disc ml-5 space-y-1">
+                    <li><strong>General Enquiries:</strong> When you use our "General Enquiries" contact form, we collect your full name, email address, and the message you provide.</li>
+                    <li><strong>AI-Powered CV Assistant:</strong> When you use this tool, we process the text of the curriculum vitae (CV) that you paste into the text area.</li>
+                    <li><strong>AI Job Description Assistant:</strong> When you use this tool, we process the job title and key responsibilities you provide.</li>
+                </ul>
+
+                <h3 class="text-lg font-bold font-playfair text-dark-text pt-2">3. How We Use Your Information</h3>
+                <p>The information you provide is used for the following specific purposes:</p>
+                 <ul class="list-disc ml-5 space-y-1">
+                    <li><strong>General Enquiries:</strong> To respond to your query and communicate with you.</li>
+                    <li><strong>AI Tools (CV Assistant & Job Description Assistant):</strong> The text you submit to these tools is sent securely and anonymously to Google's Gemini API for real-time analysis. <strong>We do not store, save, review, or share the content you submit to these AI tools.</strong> The sole purpose of processing this data is to provide you with the instant, automated feedback or content generation you have requested. The data is processed and then immediately discarded.</li>
+                </ul>
+
+                <h3 class="text-lg font-bold font-playfair text-dark-text pt-2">4. Cookie Policy</h3>
+                <p>This website does not use any non-essential cookies. We do not use cookies for tracking, analytics, or advertising purposes. Any cookies that may be in use are classified as "strictly necessary" for the basic functioning and security of the website, for which user consent is not required under UK privacy law.</p>
+
+                <h3 class="text-lg font-bold font-playfair text-dark-text pt-2">5. Your Data Protection Rights</h3>
+                <p>Under UK data protection law, you have rights including the right of access, rectification, and erasure. To exercise these rights, please contact us.</p>
+                
+                <h3 class="text-lg font-bold font-playfair text-dark-text pt-2">6. Contact Us</h3>
+                <p>If you have any questions, please contact us at: <a href="mailto:john@stratfordgray.com" class="text-gold hover:underline">john@stratfordgray.com</a>.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const jobsData =;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const jobsContainer = document.getElementById('jobs-container');
+            const jobModal = document.getElementById('job-modal');
+            const jobModalContent = document.getElementById('job-modal-content');
+
+            // --- Render Job Cards ---
+            function renderJobCards() {
+                if (!jobsContainer) return;
+                const loadingPara = document.getElementById('jobs-loading');
+                if (loadingPara) {
+                    loadingPara.style.display = 'none';
+                }
+                jobsContainer.innerHTML = '';
+                jobsData.forEach(job => {
+                    const card = document.createElement('div');
+                    card.className = 'flex-none w-80 bg-white p-6 rounded-lg shadow-md border border-gray-200 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all';
+                    card.setAttribute('data-job-id', job.id);
+                    card.innerHTML = `
+                        <h3 class="font-bold text-xl text-dark-text">${job.title}</h3>
+                        <p class="text-sm text-gold mt-1">${job.location}</p>
+                        <p class="text-blue-gray font-medium text-sm mt-2">${job.salary}</p>
+                        <p class="text-blue-gray-light text-sm mt-4 h-20">${job.shortDesc}</p>
+                        <div class="mt-6 inline-block w-full text-center bg-gray-200 text-dark-text font-bold py-2 px-4 rounded-lg">View Details</div>
+                    `;
+                    card.addEventListener('click', () => showJobModal(job.id));
+                    jobsContainer.appendChild(card);
+                });
+                
+                document.getElementById('scroll-left-btn').classList.remove('hidden');
+                document.getElementById('scroll-right-btn').classList.remove('hidden');
+            }
+
+            // --- Show Job Modal ---
+            function showJobModal(jobId) {
+                const job = jobsData.find(j => j.id === jobId);
+                if (!job ||!jobModalContent ||!jobModal) return;
+
+                jobModalContent.innerHTML = `
+                    <button id="close-job-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                    <h2 class="text-2xl font-bold font-playfair text-dark-text">${job.title}</h2>
+                    <div class="flex items-center gap-4 mt-2 mb-4 text-sm">
+                         <span class="text-gold font-medium">${job.location}</span>
+                         <span class="text-blue-gray font-medium">${job.salary}</span>
+                    </div>
+                    <div class="space-y-4 text-sm text-blue-gray-light">${job.longDesc}</div>
+                    <a href="mailto:john@stratfordgray.com?subject=Application for ${encodeURIComponent(job.title)}" class="mt-8 w-full block text-center bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-lg">
+                        Apply Now
+                    </a>
+                `;
+
+                jobModal.classList.remove('hidden');
+                document.getElementById('close-job-modal-btn').addEventListener('click', () => {
+                     jobModal.classList.add('hidden');
+                });
+            }
+            
+            // --- Close modals on outside click ---
+            jobModal.addEventListener('click', (e) => {
+                if (e.target === jobModal) {
+                    jobModal.classList.add('hidden');
+                }
+            });
+
+            // Initial render
+            renderJobCards();
+
+            // --- Job Scroller ---
+            const scrollLeftBtn = document.getElementById('scroll-left-btn');
+            const scrollRightBtn = document.getElementById('scroll-right-btn');
+
+            if (jobsContainer) {
+                const scrollAmount = 352; // Width of a card + gap
+
+                scrollRightBtn.addEventListener('click', () => {
+                    jobsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+
+                scrollLeftBtn.addEventListener('click', () => {
+                    jobsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+            }
+
+            // --- Privacy Modal ---
+            const privacyModal = document.getElementById('privacy-modal');
+            const privacyLink = document.getElementById('privacy-link');
+            const closePrivacyModalBtn = document.getElementById('close-privacy-modal-btn');
+
+            if (privacyModal && privacyLink && closePrivacyModalBtn) {
+                privacyLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    privacyModal.classList.remove('hidden');
+                });
+                closePrivacyModalBtn.addEventListener('click', () => {
+                    privacyModal.classList.add('hidden');
+                });
+                privacyModal.addEventListener('click', (e) => {
+                    if (e.target === privacyModal) {
+                        privacyModal.classList.add('hidden');
+                    }
+                });
+            }
+
+            // --- Gemini AI CV Assistant ---
+            const cvInput = document.getElementById('cv-input');
+            const cvSubmitBtn = document.getElementById('cv-submit-btn');
+            const cvResults = document.getElementById('cv-results');
+            const cvLoader = document.getElementById('cv-loader');
+            const cvBtnText = document.getElementById('cv-btn-text');
+
+            if (cvSubmitBtn) {
+                cvSubmitBtn.addEventListener('click', async () => {
+                    const cvText = cvInput.value;
+                    if (cvText.trim().length < 50) {
+                        cvResults.style.display = 'block';
+                        cvResults.innerHTML = `<p class="text-red-500">Please paste in your full CV for analysis.</p>`;
+                        return;
+                    }
+
+                    cvSubmitBtn.disabled = true;
+                    cvLoader.classList.remove('hidden');
+                    cvBtnText.textContent = 'Analyzing...';
+                    cvResults.style.display = 'none';
+
+                    try {
+                        // -- CORRECTED CODE FOR CV ASSISTANT --
+                        // The hard-coded API key and direct API call are removed for security.
+                        // The fetch call now points to the secure Netlify Function proxy.
+                        const response = await fetch('/api/cv-assistant', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ prompt: cvText }),
+                        });
+                        // -- END OF CORRECTED CODE --
+
+                        if (!response.ok) throw new Error(`API Error: ${response.status} ${response.statusText}`);
+                        const result = await response.json();
+                        const feedback = result.candidates?.?.content?.parts?.?.text;
+                        
+                        if (feedback) {
+                            let htmlFeedback = feedback
+                               .replace(/\*\*(.*?)\*\*/g, '<h5 class="font-bold text-dark-text mt-4 mb-2">$1</h5>')
+                               .replace(/(\r\n|\n|\r)/gm, "\n")
+                               .replace(/\n\*/g, '* ')
+                               .replace(/^\* (.*$)/gm, '<li class="ml-5 list-disc">$1</li>')
+                               .replace(/\n/g, '<br>')
+                               .replace(/<li class="ml-5 list-disc">(.*?)<br>/g, '<li class="ml-5 list-disc">$1</li>');
+                            
+                            cvResults.innerHTML = htmlFeedback;
+                            cvResults.style.display = 'block';
+                        } else {
+                            throw new Error("No feedback was generated.");
+                        }
+                    } catch (error) {
+                        console.error("Error with Gemini API:", error);
+                        cvResults.innerHTML = `<p class="text-red-500">Sorry, we were unable to analyze your CV at this time. Please try again later.</p>`;
+                        cvResults.style.display = 'block';
+                    } finally {
+                        cvSubmitBtn.disabled = false;
+                        cvLoader.classList.add('hidden');
+                        cvBtnText.textContent = 'Get Feedback';
+                    }
+                });
+            }
+
+            // --- Gemini AI Job Description Assistant ---
+            const jdTitle = document.getElementById('jd-title');
+            const jdInput = document.getElementById('jd-input');
+            const jdSubmitBtn = document.getElementById('jd-submit-btn');
+            const jdResults = document.getElementById('jd-results');
+            const jdLoader = document.getElementById('jd-loader');
+            const jdBtnText = document.getElementById('jd-btn-text');
+
+            if (jdSubmitBtn) {
+                jdSubmitBtn.addEventListener('click', async () => {
+                    const title = jdTitle.value;
+                    const details = jdInput.value;
+                    if (title.trim().length < 3 |
+
+| details.trim().length < 20) {
+                        jdResults.style.display = 'block';
+                        jdResults.innerHTML = `<p class="text-red-500">Please provide a job title and key responsibilities.</p>`;
+                        return;
+                    }
+
+                    jdSubmitBtn.disabled = true;
+                    jdLoader.classList.remove('hidden');
+                    jdBtnText.textContent = 'Generating...';
+                    jdResults.style.display = 'none';
+
+                    try {
+                        // -- CORRECTED CODE FOR JD ASSISTANT --
+                        // The hard-coded API key and direct API call are removed for security.
+                        // The fetch call now points to the secure Netlify Function proxy.
+                        const response = await fetch('/api/jd-assistant', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ title, details }),
+                        });
+                        // -- END OF CORRECTED CODE --
+                        
+                        if (!response.ok) throw new Error(`API Error: ${response.status} ${response.statusText}`);
+                        const result = await response.json();
+                        const description = result.candidates?.?.content?.parts?.?.text;
+                        
+                        if (description) {
+                            let htmlDescription = description
+                               .replace(/\*\*(.*?)\*\*/g, '<h5 class="font-bold text-dark-text mt-4 mb-2">$1</h5>')
+                               .replace(/(\r\n|\n|\r)/gm, "\n")
+                               .replace(/\n\*/g, '* ')
+                               .replace(/^\* (.*$)/gm, '<li class="ml-5 list-disc">$1</li>')
+                               .replace(/\n/g, '<br>')
+                               .replace(/<li class="ml-5 list-disc">(.*?)<br>/g, '<li class="ml-5 list-disc">$1</li>');
+
+                            jdResults.innerHTML = htmlDescription;
+                            jdResults.style.display = 'block';
+                        } else {
+                            throw new Error("No description was generated.");
+                        }
+                    } catch (error) {
+                        console.error("Error with Gemini API:", error);
+                        jdResults.innerHTML = `<p class="text-red-500">Sorry, we were unable to generate a job description at this time. Please try again later.</p>`;
+                        jdResults.style.display = 'block';
+                    } finally {
+                        jdSubmitBtn.disabled = false;
+                        jdLoader.classList.add('hidden');
+                        jdBtnText.textContent = 'Generate Description';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
