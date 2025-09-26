@@ -1,5 +1,0 @@
-[functions]
-directory = "netlify/functions/"
-[build]
-node_version = "20"
-publish = "stratfordgray/website"
