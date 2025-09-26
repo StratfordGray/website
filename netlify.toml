@@ -1,0 +1,9 @@
+[functions]
+directory = "netlify/functions/"
+
+Explicitly tell Netlify to pass environment variables to the functions
+external_node_modules = ["node-fetch"]
+node_bundler = "esbuild"
+
+[build]
+node_version = "20"
