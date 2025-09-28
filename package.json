@@ -1,0 +1,15 @@
+{
+  "name": "netlify-ai-tools",
+  "version": "1.0.0",
+  "description": "A website with Netlify functions for AI tools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
