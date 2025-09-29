@@ -16,7 +16,6 @@ exports.handler = async function (event) {
         prompt = body.prompt;
     }
   } catch (e) {
-    // Catches the "Unexpected end of JSON input" error specifically
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON input. Please ensure data is sent.' }) };
   }
     
@@ -24,7 +23,7 @@ exports.handler = async function (event) {
     const apiKey = process.env.GEMINI_API_KEY; 
 
     if (!apiKey) {
-      return { statusCode: 400, body: JSON.stringify({ error: 'API key is not configured.' }) };
+      return { statusCode: 400, body: JSON.stringify({ error: 'API key is not configured. Check Netlify Environment Variables.' }) };
     }
     
     // Check if prompt is missing AFTER parsing the body
@@ -37,9 +36,10 @@ exports.handler = async function (event) {
     const payload = {
         contents: [{ parts: [{ text: `Here is the CV text:\n\n${prompt}` }] }],
         systemInstruction: { parts: [{ text: systemPrompt }] },
-        model: "gemini-2.5-flash-preview-05-20" 
+        // FIX: Removed explicit 'model' field from payload to rely on URL and prevent 400 errors
     };
 
+    // The model is explicitly in the URL
     const apiURL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
     const response = await fetch(apiURL, {
@@ -50,8 +50,8 @@ exports.handler = async function (event) {
 
     if (!response.ok) {
         const errorBody = await response.text();
-        console.error('Gemini API Error Status:', response.status);
-        console.error('Gemini API Error Body:', errorBody);
+        // CRITICAL: Log the raw error body from the API to Netlify logs
+        console.error('Gemini API RAW Error Body (400 Diagnosis):', errorBody); 
         return { statusCode: response.status, body: JSON.stringify({ error: `Gemini API call failed with status ${response.status}.` }) };
     }
 
