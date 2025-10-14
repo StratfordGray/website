@@ -26,7 +26,7 @@ exports.handler = async function (event) {
     const response = await fetch(airtableUrl, {
       method: 'GET',
       headers: {
-        // FIX: Authorization header now uses 'Bearer' prefix as required by Personal Access Tokens
+        // Authorization header now uses 'Bearer' prefix as required by Personal Access Tokens
         'Authorization': `Bearer ${airtableToken}`,
         'Content-Type': 'application/json',
       },
@@ -36,7 +36,8 @@ exports.handler = async function (event) {
         const errorBody = await response.text();
         console.error('Airtable API Error Status:', response.status);
         console.error('Airtable API Error Body:', errorBody);
-        return { statusCode: response.status, body: JSON.stringify({ error: 'Failed to fetch jobs from Airtable.' }) };
+        // FIX: Provide the specific status code for better diagnosis
+        return { statusCode: response.status, body: JSON.stringify({ error: `Failed to fetch jobs from Airtable. Status: ${response.status}` }) };
     }
 
     const data = await response.json();
@@ -65,3 +66,4 @@ exports.handler = async function (event) {
     };
   }
 };
+// Final comment update to force Netlify build
