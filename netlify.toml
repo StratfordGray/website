@@ -1,0 +1,10 @@
+[functions]
+# Specify the directory where your serverless functions live
+directory = "netlify/functions/"
+
+# Explicitly allow the bundler to use node-fetch
+external_node_modules = ["node-fetch"]
+
+[build]
+# Sets Node.js version to 20 for required JavaScript features
+node_version = "20"

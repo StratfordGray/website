@@ -1,0 +1,21 @@
+{
+  "name": "netlify-ai-tools",
+  "version": "1.0.0",
+  "description": "A website with Netlify functions for AI tools.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
