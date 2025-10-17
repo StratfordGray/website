@@ -1,4 +1,4 @@
-const fetch = require('node-fetch'); // Required for Netlify functions to make API calls
+// Removed explicit require, relying on Netlify's global fetch
 
 /**
  * Netlify serverless function to securely fetch job data from Airtable.
@@ -16,11 +16,17 @@ exports.handler = async (event, context) => {
     const AIRTABLE_TABLE_NAME = process.env.AIRTABLE_TABLE_NAME; // e.g., 'Jobs' or 'Current Openings'
     // --- END CONFIGURATION ---
 
-    if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID || !AIRTABLE_TABLE_NAME) {
-        console.error('Missing Airtable credentials in environment variables.');
+    let missingVars = [];
+    if (!AIRTABLE_API_KEY) missingVars.push('AIRTABLE_API_KEY');
+    if (!AIRTABLE_BASE_ID) missingVars.push('AIRTABLE_BASE_ID');
+    if (!AIRTABLE_TABLE_NAME) missingVars.push('AIRTABLE_TABLE_NAME');
+
+    if (missingVars.length > 0) {
+        const errorMessage = `Server misconfiguration: Missing required environment variables: ${missingVars.join(', ')}.`;
+        console.error(errorMessage);
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: 'Server misconfiguration: Airtable credentials missing.' }),
+            body: JSON.stringify({ error: errorMessage }),
         };
     }
 
@@ -32,6 +38,7 @@ exports.handler = async (event, context) => {
     console.log('Airtable URL Attempt:', url); 
 
     try {
+        // Fetch is now global (in Netlify's execution context)
         const airtableResponse = await fetch(url, {
             headers: {
                 Authorization: `Bearer ${AIRTABLE_API_KEY}`,
