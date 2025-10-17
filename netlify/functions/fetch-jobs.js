@@ -6,18 +6,18 @@
  * * To debug the 404 error:
  * 1. Ensure you have set the three Environment Variables (AIRTABLE_...) in Netlify.
  * 2. Check the Netlify function logs for the "Airtable URL Attempt" printout below.
- * 3. Copy that URL and test it directly in your browser or Postman with the API key 
+ * 3. Copy that URL and test it directly in your browser or Postman with the token 
  * in the Authorization header to confirm the URL is valid.
  */
 exports.handler = async (event, context) => {
     // --- CRITICAL CONFIGURATION: These must be set in Netlify Environment Variables ---
-    const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY; 
+    const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN; // Your Personal Access Token (PAT)
     const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;   // e.g., 'appxxxxxxxxxxxxxx'
     const AIRTABLE_TABLE_NAME = process.env.AIRTABLE_TABLE_NAME; // e.g., 'Jobs' or 'Current Openings'
     // --- END CONFIGURATION ---
 
     let missingVars = [];
-    if (!AIRTABLE_API_KEY) missingVars.push('AIRTABLE_API_KEY');
+    if (!AIRTABLE_TOKEN) missingVars.push('AIRTABLE_TOKEN'); // Checking for the new name
     if (!AIRTABLE_BASE_ID) missingVars.push('AIRTABLE_BASE_ID');
     if (!AIRTABLE_TABLE_NAME) missingVars.push('AIRTABLE_TABLE_NAME');
 
@@ -41,7 +41,7 @@ exports.handler = async (event, context) => {
         // Fetch is now global (in Netlify's execution context)
         const airtableResponse = await fetch(url, {
             headers: {
-                Authorization: `Bearer ${AIRTABLE_API_KEY}`,
+                Authorization: `Bearer ${AIRTABLE_TOKEN}`, // Using the new token variable
             },
         });
 
