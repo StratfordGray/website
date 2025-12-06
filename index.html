@@ -3,18 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stratford Gray | Your Agile Recruitment Partner</title>
-    <!-- Basic SEO Meta Tags -->
-    <meta name="description" content="Stratford Gray is your agile legal recruitment partner specializing in permanent and contract roles across the UK. Connecting top-tier legal talent with leading firms.">
+    <title>Stratford Gray | Specialist Legal Recruitment London & NYC</title>
+    
+    <meta name="description" content="Stratford Gray is a specialist legal recruitment consultancy for London and New York. We connect top-tier General Counsel and Associates with leading law firms and in-house teams.">
     <link rel="canonical" href="https://www.stratfordgray.com/"> 
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph (Social Media Sharing) Tags -->
+    <link rel="icon" href="https://placehold.co/32x32/c7a159/ffffff?text=SG" type="image/png">
+
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="Stratford Gray | Specialist Legal Recruitment">
     <meta property="og:description" content="Your Agile Recruitment Partner, delivering bespoke and responsive talent acquisition solutions in the legal sector.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.stratfordgray.com/">
-    <meta property="og:image" content="https://www.stratfordgray.com/images/social-preview.jpg"> <!-- **CRITICAL: Replace with your actual image URL** -->
+    <meta property="og:image" content="https://www.stratfordgray.com/images/social-preview.jpg"> 
+
+    <!-- SEO UPDATE: Twitter Card Tags for better social sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stratford Gray | Specialist Legal Recruitment">
+    <meta name="twitter:description" content="Connecting top-tier legal talent with leading firms in London & NYC.">
+    <meta name="twitter:image" content="https://www.stratfordgray.com/images/social-preview.jpg">
+
+    <!-- SEO UPDATE: Combined JSON-LD for Organization AND FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "RecruitmentAgency",
+          "name": "Stratford Gray",
+          "url": "https://www.stratfordgray.com",
+          "logo": "https://www.stratfordgray.com/images/logo.png",
+          "description": "Agile legal recruitment partner specializing in permanent and contract roles across London and NYC.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "London",
+            "addressCountry": "UK"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/stratford-gray",
+            "https://twitter.com/stratfordgray"
+          ],
+          "priceRange": "$$$"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you recruit for in-house legal roles?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we specialize in placing General Counsel, Head of Legal, and Legal Counsel candidates into high-growth tech firms, financial institutions, and established corporates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What locations do you cover?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our primary markets are London (UK) and New York (USA), but we also support clients with strategic hires across Europe and the Middle East."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How quickly can you fill a legal vacancy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our agile methodology allows us to shortlist candidates within 48-72 hours for contract roles, and 1-2 weeks for permanent retained searches."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +144,7 @@
         <header class="w-full p-6 md:p-8 sticky top-0 bg-pale-bg/80 backdrop-blur-sm z-50 border-b border-gray-200/50">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="#top" class="flex items-center gap-3 cursor-pointer">
-                     <svg class="w-10 h-10 text-gold" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <svg class="w-10 h-10 text-gold" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M75 25 C75 10, 60 10, 50 10 S 25 10, 25 25" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
                         <path d="M25 75 C25 90, 40 90, 50 90 S 75 90, 75 75" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
                         <line x1="25" y1="50" x2="75" y2="50" stroke="#4a5568" stroke-width="8" stroke-linecap="round"/>
@@ -99,13 +162,13 @@
         <main class="flex-grow">
 
             <!-- Home Page Section -->
-            <section id="home" class="bg-pattern">
+            <section id="home" class="bg-pattern" aria-label="Hero Section">
                  <div class="container mx-auto px-6 py-24 text-center flex flex-col items-center justify-center min-h-[calc(100vh-100px)]">
                     <h1 class="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-dark-text">
                         Navigating Complexity, <span class="text-gold">Delivering Clarity.</span>
                     </h1>
                     
-                    <p class="mt-8 text-lg md:text-xl text-blue-gray max-w-2xl mx-auto">Your Agile Recruitment Partner</p>
+                    <p class="mt-8 text-lg md:text-xl text-blue-gray max-w-2xl mx-auto">Your Agile Legal Recruitment Partner for London & New York</p>
 
                     <div class="mt-12 flex flex-col sm:flex-row gap-4">
                         <a href="#candidates" class="text-blue-gray border border-gray-300 hover:bg-gray-200 transition-colors font-bold py-4 px-8 rounded-lg text-lg">
@@ -119,7 +182,7 @@
             </section>
 
             <!-- About Us Page Section -->
-            <section id="about" class="py-16 md:py-24 bg-white">
+            <section id="about" class="py-16 md:py-24 bg-white" aria-label="About Us">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-16">
                          <h2 class="text-3xl md:text-5xl font-playfair font-bold text-dark-text">Bespoke Recruitment, Redefined</h2>
@@ -134,7 +197,8 @@
                         </div>
                         <div class="bg-pale-bg p-8 rounded-lg shadow-sm border border-gray-200">
                             <div class="flex items-center gap-6">
-                                <img src="https://placehold.co/100x100/c7a159/FFFFFF?text=JJ" alt="John Jennings, Director" class="rounded-full w-24 h-24 border-4 border-gray-200">
+                                <!-- SEO UPDATE: Added loading="lazy" for performance -->
+                                <img src="https://placehold.co/100x100/c7a159/FFFFFF?text=JJ" alt="John Jennings, Director of Stratford Gray" loading="lazy" class="rounded-full w-24 h-24 border-4 border-gray-200">
                                 <div>
                                     <h4 class="text-2xl font-bold text-dark-text">John Jennings</h4>
                                     <p class="text-gold font-medium">Director</p>
@@ -147,33 +211,35 @@
             </section>
 
             <!-- Jobs Section -->
-            <section id="jobs" class="py-16 md:py-24 bg-pale-bg">
+            <section id="jobs" class="py-16 md:py-24 bg-pale-bg" aria-label="Current Opportunities">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-12">
                          <h2 class="text-3xl md:text-5xl font-playfair font-bold text-dark-text">Current Opportunities</h2>
                          <p class="mt-4 text-lg text-blue-gray max-w-3xl mx-auto">Explore a selection of our featured roles. New opportunities are added regularly.</p>
                     </div>
-                    <div class="relative">
-                        <!-- Added loader and error message for the jobs section -->
-                        <p id="jobs-loading" class="text-center text-blue-gray-light">Loading current opportunities...</p>
-                        <p id="jobs-error" class="hidden text-center text-red-500">Failed to load jobs. Please try again later.</p>
-
-                        <div id="jobs-container" class="flex overflow-x-auto space-x-8 pb-8 hide-scroll-bar">
-                            <!-- Job cards will be dynamically inserted here by JavaScript -->
+                    <div class="relative group">
+                        <!-- Loading/Error States -->
+                        <p id="jobs-loading" class="text-center text-blue-gray-light hidden">Loading current opportunities...</p>
+                        
+                        <!-- Carousel Container -->
+                        <div id="jobs-container" class="flex overflow-x-auto space-x-6 pb-8 hide-scroll-bar px-4 snap-x snap-mandatory">
+                            <!-- Job cards injected via JS -->
                         </div>
-                        <!-- Scroll Buttons (will be hidden until jobs load) -->
-                        <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/80 p-2 rounded-full transition-colors z-10 hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-dark-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                        
+                        <!-- Scroll Buttons -->
+                        <!-- SEO/A11Y UPDATE: Added aria-labels for screen readers -->
+                        <button id="scroll-left-btn" aria-label="Scroll left" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow-lg p-3 rounded-full transition-all z-10 text-gold border border-gray-200 opacity-0 group-hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
                         </button>
-                        <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/80 p-2 rounded-full transition-colors z-10 hidden">
-                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-dark-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        <button id="scroll-right-btn" aria-label="Scroll right" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white shadow-lg p-3 rounded-full transition-all z-10 text-gold border border-gray-200 opacity-0 group-hover:opacity-100">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                         </button>
                     </div>
                 </div>
             </section>
 
             <!-- Interactive Tools Section -->
-            <section id="interactive-tools" class="py-16 md:py-24 bg-pattern">
+            <section id="interactive-tools" class="py-16 md:py-24 bg-pattern" aria-label="Tools and Contact">
                  <div class="container mx-auto px-6">
                     <div class="text-center mb-16">
                          <h2 class="text-3xl md:text-5xl font-playfair font-bold text-dark-text">Connect With Us</h2>
@@ -256,13 +322,42 @@
                     </div>
                  </div>
             </section>
+            
+            <!-- SEO UPDATE: FAQ Section for Structured Data -->
+            <section id="faq" class="py-16 md:py-24 bg-white" aria-labelledby="faq-heading">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 id="faq-heading" class="text-3xl md:text-5xl font-playfair font-bold text-dark-text">Frequently Asked Questions</h2>
+                        <p class="mt-4 text-lg text-blue-gray max-w-2xl mx-auto">Common questions about our legal recruitment services.</p>
+                    </div>
+                    <div class="max-w-3xl mx-auto space-y-6">
+                        <div class="border-b border-gray-200 pb-4">
+                            <h3 class="font-bold text-lg text-dark-text">Do you recruit for in-house legal roles?</h3>
+                            <p class="text-blue-gray mt-2">Yes, we specialize in placing General Counsel, Head of Legal, and Legal Counsel candidates into high-growth tech firms, financial institutions, and established corporates.</p>
+                        </div>
+                        <div class="border-b border-gray-200 pb-4">
+                            <h3 class="font-bold text-lg text-dark-text">What locations do you cover?</h3>
+                            <p class="text-blue-gray mt-2">Our primary markets are London (UK) and New York (USA), but we also support clients with strategic hires across Europe and the Middle East.</p>
+                        </div>
+                        <div class="border-b border-gray-200 pb-4">
+                            <h3 class="font-bold text-lg text-dark-text">How quickly can you fill a legal vacancy?</h3>
+                            <p class="text-blue-gray mt-2">Our agile methodology allows us to shortlist candidates within 48-72 hours for contract roles, and 1-2 weeks for permanent retained searches.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <!-- Footer -->
         <footer class="w-full p-6 md:p-8 bg-white border-t border-gray-200/50">
             <div class="container mx-auto text-center text-gray-400 text-sm">
-                &copy; 2025 Stratford Gray. All Rights Reserved.
-                <a href="#" id="privacy-link" class="ml-4 hover:text-gold transition-colors">Privacy Policy</a>
+                <!-- SEO UPDATE: Address details in footer -->
+                <p class="mb-4">Stratford Gray | London & New York Legal Recruitment</p>
+                <p>&copy; 2025 Stratford Gray. All Rights Reserved.</p>
+                <div class="mt-2">
+                    <a href="#" id="privacy-link" class="hover:text-gold transition-colors">Privacy Policy</a>
+                </div>
             </div>
         </footer>
 
@@ -279,7 +374,7 @@
     <!-- Privacy Policy Modal -->
     <div id="privacy-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white text-dark-text rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
-            <button id="close-privacy-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
+            <button id="close-privacy-modal-btn" aria-label="Close privacy modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
             <h2 class="text-2xl font-bold font-playfair mb-4">Privacy Policy</h2>
@@ -318,10 +413,52 @@
 
 
     <script>
-        // Placeholder for jobsData. This will be replaced by live data fetch.
-        let jobsData = [];
+        // --- STATIC JOB DATA (Replaces Fetch) ---
+        // You can edit the jobs below. Copy/Paste a block { ... }, to add more.
+        const jobsData = [
+            {
+                id: 1,
+                title: "General Counsel",
+                location: "London, UK",
+                salary: "£140,000 - £160,000 + Equity",
+                shortDesc: "Strategic leadership role for a high-growth SaaS platform. Reporting to the CEO.",
+                longDesc: "<p>We are partnering with a Series C funded SaaS unicorn looking for their first General Counsel. You will build the legal function from scratch, advising on international expansion, commercial contracts, and fundraising rounds.</p><p><strong>Requirements:</strong> 8+ PQE, In-house tech experience essential.</p>"
+            },
+            {
+                id: 2,
+                title: "Senior Legal Counsel",
+                location: "New York, NY",
+                salary: "$210,000 - $240,000",
+                shortDesc: "Leading Fintech looking for regulatory and product counsel expertise.",
+                longDesc: "<p>A market-leading Fintech in NYC is seeking a Senior Counsel to support their product teams. You will navigate complex regulatory landscapes while enabling rapid product deployment.</p><p><strong>Requirements:</strong> NY Bar admission, 6+ years experience in financial services regulations.</p>"
+            },
+            {
+                id: 3,
+                title: "Head of Legal",
+                location: "London, UK (Hybrid)",
+                salary: "£110,000 - £130,000",
+                shortDesc: "Commercial focused role for a well-established retail brand.",
+                longDesc: "<p>An iconic British retail brand needs a commercially minded Head of Legal. You will manage a small team and oversee the entire commercial contract portfolio, IP portfolio, and handle property matters.</p><p><strong>Requirements:</strong> Broad commercial experience, ability to manage stakeholders at all levels.</p>"
+            },
+            {
+                id: 4,
+                title: "Corporate Associate",
+                location: "New York, NY",
+                salary: "$250,000 - $310,000 (Cravath Scale)",
+                shortDesc: "Top-tier law firm seeking M&A associates for their private equity practice.",
+                longDesc: "<p>Our client, a prestigious AmLaw 50 firm, is expanding their NY Private Equity group. They are looking for ambitious associates with experience in complex M&A transactions.</p><p><strong>Requirements:</strong> 3-5 years experience in a top-tier firm corporate practice.</p>"
+            },
+            {
+                id: 5,
+                title: "Commercial Legal Counsel",
+                location: "London / Remote",
+                salary: "£90,000 - £100,000",
+                shortDesc: "Flexible role within a global media and entertainment organization.",
+                longDesc: "<p>A fantastic opportunity for a lawyer looking for work-life balance without compromising on quality of work. You will be drafting and negotiating media rights, distribution agreements, and talent contracts.</p><p><strong>Requirements:</strong> TMT/Media experience preferred.</p>"
+            }
+        ];
         
-        // --- CORE FUNCTIONS (Moved to global scope to fix ReferenceError) ---
+        // --- CORE FUNCTIONS ---
         
         // Function to render job cards to the DOM
         function renderJobCards(data) {
@@ -329,31 +466,21 @@
             if (!jobsContainer) return;
 
             jobsContainer.innerHTML = '';
-            if (data.length === 0) {
-                jobsContainer.innerHTML = '<p class="text-center text-blue-gray-light w-full">No current opportunities available at this time.</p>';
-                return;
-            }
             
             data.forEach(job => {
                 const card = document.createElement('div');
-                card.className = 'flex-none w-80 bg-white p-6 rounded-lg shadow-md border border-gray-200 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all';
+                card.className = 'flex-none w-80 bg-white p-6 rounded-lg shadow-md border border-gray-200 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all snap-center';
                 card.setAttribute('data-job-id', job.id);
                 card.innerHTML = `
-                    <h3 class="font-bold text-xl text-dark-text">${job.title}</h3>
-                    <p class="text-sm text-gold mt-1">${job.location}</p>
-                    <p class="text-blue-gray font-medium text-sm mt-2">${job.salary}</p>
-                    <p class="text-blue-gray-light text-sm mt-4 h-20">${job.shortDesc}</p>
-                    <div class="mt-6 inline-block w-full text-center bg-gray-200 text-dark-text font-bold py-2 px-4 rounded-lg">View Details</div>
+                    <h3 class="font-bold text-xl text-dark-text truncate" title="${job.title}">${job.title}</h3>
+                    <p class="text-sm text-gold mt-1 font-medium">${job.location}</p>
+                    <p class="text-blue-gray font-semibold text-sm mt-2">${job.salary}</p>
+                    <p class="text-blue-gray-light text-sm mt-4 h-16 overflow-hidden text-ellipsis line-clamp-3">${job.shortDesc}</p>
+                    <div class="mt-6 w-full text-center bg-gray-100 hover:bg-gold hover:text-white transition-colors text-dark-text font-bold py-2 px-4 rounded-lg">View Details</div>
                 `;
                 card.addEventListener('click', () => showJobModal(job.id));
                 jobsContainer.appendChild(card);
             });
-            
-            // Only show scroll buttons if jobs were successfully loaded
-            const scrollLeft = document.getElementById('scroll-left-btn');
-            const scrollRight = document.getElementById('scroll-right-btn');
-            if (scrollLeft) scrollLeft.classList.remove('hidden');
-            if (scrollRight) scrollRight.classList.remove('hidden');
         }
 
         // Function to show job detail modal
@@ -366,16 +493,24 @@
             if (!job || !jobModalContent || !jobModal) return;
 
             jobModalContent.innerHTML = `
-                <button id="close-job-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
+                <button id="close-job-modal-btn" aria-label="Close job details" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
-                <h2 class="text-2xl font-bold font-playfair text-dark-text">${job.title}</h2>
-                <div class="flex items-center gap-4 mt-2 mb-4 text-sm">
-                     <span class="text-gold font-medium">${job.location}</span>
-                     <span class="text-blue-gray font-medium">${job.salary}</span>
+                <h2 class="text-2xl font-bold font-playfair text-dark-text pr-8">${job.title}</h2>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-2 mb-6 text-sm">
+                     <span class="text-gold font-bold flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        ${job.location}
+                     </span>
+                     <span class="text-blue-gray font-medium flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        ${job.salary}
+                     </span>
                 </div>
-                <div class="space-y-4 text-sm text-blue-gray-light">${job.longDesc}</div>
-                <a href="mailto:john@stratfordgray.com?subject=Application for ${encodeURIComponent(job.title)}" class="mt-8 w-full block text-center bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-lg">
+                <div class="space-y-4 text-sm text-blue-gray leading-relaxed border-t border-gray-100 pt-4">
+                    ${job.longDesc}
+                </div>
+                <a href="mailto:john@stratfordgray.com?subject=Application for ${encodeURIComponent(job.title)}" class="mt-8 w-full flex items-center justify-center gap-2 bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-lg shadow-lg">
                     Apply Now
                 </a>
             `;
@@ -385,56 +520,20 @@
                  jobModal.classList.add('hidden');
             });
         }
-        // --- END CORE FUNCTIONS ---
 
-
-        // --- ASYNC FUNCTION TO FETCH JOBS FROM AIRTABLE NETLIFY FUNCTION ---
-        async function fetchJobs() {
-            const jobsLoading = document.getElementById('jobs-loading');
-            const jobsError = document.getElementById('jobs-error');
-            jobsLoading.style.display = 'block';
-            jobsError.style.display = 'none';
-
-            try {
-                // FIX: Use the full, explicitly constructed URL for maximum compatibility
-                // when running locally or in environments like the Canvas sandbox.
-                const baseUrl = window.location.protocol + "//" + window.location.host;
-                const apiUrl = baseUrl + '/.netlify/functions/fetch-jobs';
-                
-                const response = await fetch(apiUrl);
-                
-                if (!response.ok) {
-                    let errorDetails = { error: `Server returned HTTP status ${response.status}.` };
-                    try {
-                        errorDetails = await response.json();
-                    } catch (e) {
-                        throw new Error(`Server returned status ${response.status}. Likely configuration or function error.`);
-                    }
-                    throw new Error(`Fetch failed with status ${response.status}. Details: ${errorDetails.error || 'Unknown.'}`);
-                }
-
-                jobsData = await response.json();
-                renderJobCards(jobsData);
-
-            } catch (error) {
-                console.error("Airtable Job Fetch Error:", error);
-                jobsError.textContent = `Sorry, we failed to load job listings. Check Netlify function logs for details. Error: ${error.message}`;
-                jobsError.style.display = 'block';
-                renderJobCards([]); 
-            } finally {
-                jobsLoading.style.display = 'none';
-            }
+        // --- LOAD JOBS ---
+        function loadJobs() {
+            // Simply render the static data
+            renderJobCards(jobsData);
         }
-        // --- END JOB FETCH FUNCTION ---
 
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Start fetching jobs immediately on load
-            fetchJobs(); 
+            // Load jobs immediately
+            loadJobs(); 
 
             const jobsContainer = document.getElementById('jobs-container');
             const jobModal = document.getElementById('job-modal');
-            const jobModalContent = document.getElementById('job-modal-content');
             
             // --- Close modals on outside click ---
             jobModal.addEventListener('click', (e) => {
@@ -443,12 +542,12 @@
                 }
             });
 
-            // --- Job Scroller (Relies on jobsContainer being available) ---
+            // --- Job Scroller ---
             const scrollLeftBtn = document.getElementById('scroll-left-btn');
             const scrollRightBtn = document.getElementById('scroll-right-btn');
 
             if (jobsContainer) {
-                const scrollAmount = 352; // Width of a card + gap
+                const scrollAmount = 340; // Card width + gap
 
                 scrollRightBtn.addEventListener('click', () => {
                     jobsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
@@ -519,7 +618,7 @@
                                .replace(/^\* (.*$)/gm, '<li class="ml-5 list-disc">$1</li>')
                                .replace(/\n/g, '<br>')
                                .replace(/<li class="ml-5 list-disc">(.*?)<br>/g, '<li class="ml-5 list-disc">$1</li>');
-                            
+                           
                             cvResults.innerHTML = htmlFeedback;
                             cvResults.style.display = 'block';
                         } else {
