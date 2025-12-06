@@ -266,13 +266,14 @@
                              <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
                                 <h4 class="text-xl font-bold text-dark-text">Ready to Apply?</h4>
                                 <p class="mt-2 text-blue-gray text-sm">Submit your CV for a confidential review. We accept formats such as .pdf, .doc, .docx, etc.</p>
-                                <!-- UPDATED: Added target="_blank" to ensure mail client opens -->
-                                <a href="mailto:john@stratfordgray.com?subject=CV Submission - Stratford Gray" target="_blank" class="mt-4 w-full max-w-xs bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-lg flex items-center justify-center gap-2">
+                                <!-- UPDATED: Removed target="_blank" and added visual fallback -->
+                                <a href="mailto:john@stratfordgray.com?subject=CV Submission - Stratford Gray" class="mt-4 w-full max-w-xs bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-lg flex items-center justify-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                       <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                                     </svg>
                                     Submit Your CV
                                  </a>
+                                 <p class="text-xs text-center text-blue-gray-light mt-2">Or email directly: john@stratfordgray.com</p>
                             </div>
                         </div>
                         
@@ -511,10 +512,11 @@
                 <div class="space-y-4 text-sm text-blue-gray leading-relaxed border-t border-gray-100 pt-4">
                     ${job.longDesc}
                 </div>
-                <!-- UPDATED: Added target="_blank" to ensure mail client opens in preview environments -->
-                <a href="mailto:john@stratfordgray.com?subject=Application for ${encodeURIComponent(job.title)}" target="_blank" class="mt-8 w-full flex items-center justify-center gap-2 bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-lg shadow-lg">
+                <!-- UPDATED: Removed target="_blank" and added visual fallback -->
+                <a href="mailto:john@stratfordgray.com?subject=Application for ${encodeURIComponent(job.title)}" class="mt-8 w-full flex items-center justify-center gap-2 bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all text-lg shadow-lg">
                     Apply Now
                 </a>
+                <p class="text-xs text-center text-blue-gray-light mt-2">Or email directly: john@stratfordgray.com</p>
             `;
 
             jobModal.classList.remove('hidden');
